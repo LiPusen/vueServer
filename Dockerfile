@@ -1,5 +1,5 @@
-FROM node:6.2.1
-MAINTAINER Awe <hilongjw@gmail.com>
+FROM node:8-slim
+MAINTAINER Liyq <lps8888888@gmail.com>
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
@@ -7,6 +7,6 @@ COPY package.json /usr/src/app/
 RUN npm install
 COPY . /usr/src/app
 
-EXPOSE 8080
+EXPOSE 8000
 
 ENTRYPOINT node app.js
